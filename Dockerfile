@@ -4,6 +4,6 @@ RUN go get -u github.com/improbable-eng/grpc-web/go/grpcwebproxy
 
 from alpine
 RUN apk --no-cache add ca-certificates
-WORKDIR /root/
+WORKDIR /
 COPY --from=builder /go/bin/grpcwebproxy .
-CMD ["/root/grpcwebproxy"]
+CMD ["/grpcwebproxy"]
