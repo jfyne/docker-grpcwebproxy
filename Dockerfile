@@ -19,4 +19,6 @@ WORKDIR /
 
 COPY --from=builder /go/bin/grpcwebproxy .
 
+EXPOSE 8080 8443
+
 CMD ["/grpcwebproxy"]
